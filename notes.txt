@@ -1,10 +1,8 @@
-Page 52 / 366
+Page 55 / 366
 Book : Building Modern GUIs with tkinter and Python
 by: Saurabh Chandrakar
 
 --------------------------------------------------------
-
-9-20-2023
 
 You can create a window by assigning Tk() to a variable
 and then adding labels, buttons and other objects
@@ -39,7 +37,7 @@ You can use grid to place elements in different places
 relative to eachother.
 >>> bluelabel.grid(row = 0, column = 0)
 >>> peekabutton.grid(row = 0, column = 1)
-These items will apper next to eachother. 
+These items will apper next to eachother.
 
 My user needs to type. We should give them an entry form.
 >>> userin = Entry(myroot)
@@ -48,4 +46,9 @@ and more.
 To have a textbox active when the program starts, you can say
 >>> userin.focus()
 after it is packed or gridded.
+
+.place() is a great way to be specific about where you want things,
+You can specify placesments in realtion to the size of the window
+or decide what pixel you want the object to originate at.
+>>>peekabutton.place(x=500, y=500)
 
