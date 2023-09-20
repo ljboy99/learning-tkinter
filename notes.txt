@@ -1,0 +1,51 @@
+Page 52 / 366
+Book : Building Modern GUIs with tkinter and Python
+by: Saurabh Chandrakar
+
+--------------------------------------------------------
+
+9-20-2023
+
+You can create a window by assigning Tk() to a variable
+and then adding labels, buttons and other objects
+>>> myroot = Tk()
+
+Space in the window you create is referred to as geometry.
+objects will affect the size of the window, but you can
+predefine the geometry of a window
+>>> myroot.geometry('200x200')
+
+Text can be contained in labels or buttons, which can vary
+in many different traits / qualities
+>>> label(myroot, text='Hello World!')
+>>> button(myroot, text-'Click me!')
+
+colors of buttons or text can be controlled with
+bg or fg. For buttons, you can also use activebackground
+or activeforeground to control how buttons change
+when they are being clicked.
+>>> Bluelabel = label(myroot, text='I am BLUE', fg='blue')
+>>> peekabutton = button(myroot, text='peekaboo!' fg='black, bg='black',
+... activeforeground='red', activebackground='white')
+
+But where is my stuff? You need to tell python and
+tkinter to display it with either .pack() or .grid()
+grid is used more for control over geometry and
+placement of your objects, but pack also has its own parameters
+>>> bluelabel.pack()
+>>> peekabutton.pack()
+
+You can use grid to place elements in different places
+relative to eachother.
+>>> bluelabel.grid(row = 0, column = 0)
+>>> peekabutton.grid(row = 0, column = 1)
+These items will apper next to eachother. 
+
+My user needs to type. We should give them an entry form.
+>>> userin = Entry(myroot)
+This can be customized with highlightthickness, highlightcolor,
+and more.
+To have a textbox active when the program starts, you can say
+>>> userin.focus()
+after it is packed or gridded.
+
